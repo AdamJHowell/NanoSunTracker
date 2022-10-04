@@ -11,7 +11,7 @@
  *    A2 = bottom left
  *    A3 = bottom right
  *
- * Photoresistors have a higher resistence in darkness, and a lower resistence in direct light.
+ * Photoresistors have a higher resistance in darkness, and a lower resistance in direct light.
  * The batch I bought should be 300 kΩ (kilohm) in direct sunlight, and over 20 MΩ (megohm) in complete darkness.
  * The photoresistor is half of a voltage divider, along with a 10 kΩ resistor.
  * This means most of the voltage will drop over the photoresistor, and only a fraction will drop over the 10 kΩ resistor.
@@ -26,7 +26,7 @@
  * If the sum of the left column (A0 and A2) is greater than the sum of the right column (A1 and A3), move right.
  * If the sum of the left column (A0 and A2) is lesser than the sum of the right column (A1 and A3), move left.
  *
- * Use a cooldown time or "proximity to other value" to keep from jittering the servos nonstop.
+ * Use a cool-down time or "proximity to other value" to keep from jittering the servos nonstop.
  */
 
 #include <Wire.h>
@@ -239,7 +239,7 @@ void moveDown()
 void setAzimuthAbsolutePWM( uint16_t pulseWidth )
 {
 	Serial.println( "Setting azimuth servo to minimum (full-left)..." );
-	for( uint16_t pulselen = AZIMUTH_PWM_MAX; pulselen > AZIMUTH_PWM_MIN; pulselen-- )
+	for( uint16_t pulseLength = AZIMUTH_PWM_MAX; pulseLength > AZIMUTH_PWM_MIN; pulseLength-- )
 	{
 		pwm.setPWM( AZIMUTH_SERVO, 0, pulseWidth );
 		Serial.print( pwm.getPWM( 0 ) );
@@ -252,9 +252,9 @@ void setElevationAbsolutePWM( uint16_t pulseWidth )
 {
 	Serial.println( "Setting azimuth servo to maximum (full-right)..." );
 	// pwm.setPWM( AZIMUTH_SERVO, 0, AZIMUTH_PWM_MAX );
-	for( uint16_t pulselen = AZIMUTH_PWM_MIN; pulselen < AZIMUTH_PWM_MAX; pulselen++ )
+	for( uint16_t pulseLength = AZIMUTH_PWM_MIN; pulseLength < AZIMUTH_PWM_MAX; pulseLength++ )
 	{
-		pwm.setPWM( AZIMUTH_SERVO, 0, pulselen );
+		pwm.setPWM( AZIMUTH_SERVO, 0, pulseLength );
 		Serial.print( pwm.getPWM( 0 ) );
 	}
 	Serial.println( "\nDone!" );
