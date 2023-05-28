@@ -7,3 +7,5 @@ include_directories( . )
 
 add_executable( NanoSunTracker
 		NanoSunTracker.ino )
+
+set_target_properties( NanoSunTracker PROPERTIES LINKER_LANGUAGE CXX )
