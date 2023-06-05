@@ -40,8 +40,8 @@ Servo elevationServo;
 Servo azimuthServo;
 
 
-const int AZIMUTH_MIN = 0;																			  // This sets the leftmost position for the azimuth servo.  This prevents mechanical binding.
-const int AZIMUTH_MAX = 180;																		  // This sets the rightmost position for the azimuth servo.  This prevents mechanical binding.
+const int AZIMUTH_MIN = 10;																		  // This sets the leftmost position for the azimuth servo.  This prevents mechanical binding.
+const int AZIMUTH_MAX = 170;																		  // This sets the rightmost position for the azimuth servo.  This prevents mechanical binding.
 const int AZIMUTH_STEP_SIZE = 1;																	  // The maximum azimuth servo change per step.  A smaller values results in smoother motion.
 const int ELEVATION_MIN = 40;																		  // This sets the lowest declination for the elevation servo.  This prevents mechanical binding.
 const int ELEVATION_MAX = 130;																	  // This sets the highest inclination for the elevation servo.  This prevents mechanical binding.
