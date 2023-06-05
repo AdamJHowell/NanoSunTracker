@@ -56,7 +56,7 @@ const int TOP_RIGHT_CALIBRATE = -120;															  // A value to adjust the t
 const int BOTTOM_LEFT_CALIBRATE = 0;															  // A value to adjust the bottom-left reading by.
 const int BOTTOM_RIGHT_CALIBRATE = 0;															  // A value to adjust the bottom-right reading by.
 const unsigned long SERIAL_PRINT_DELAY = 2000;												  // This is the delay between prints to the serial monitor.
-const unsigned long SERVO_MOVE_DELAY = 10;													  // The minimum time, in millisecond, between servo movements.
+const unsigned long SERVO_MOVE_DELAY = 20;													  // The minimum time, in millisecond, between servo movements.
 
 int azimuthPosition = AZIMUTH_MIN + ( ( AZIMUTH_MAX - AZIMUTH_MIN ) / 2 );			  // This should be the center position.
 int elevationPosition = ELEVATION_MIN + ( ( ELEVATION_MAX - ELEVATION_MIN ) / 2 ); // This should be the center position.
